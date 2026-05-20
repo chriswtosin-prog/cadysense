@@ -202,6 +202,24 @@ function Landing() {
         </div>
       </section>
 
+      {/* CREDIBILIDADE */}
+      <section className="py-16 relative">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            {[
+              { text: "Milhares de mulheres já adicionaram o Cadysense na rotina." },
+              { text: "A escolha mais indicada para rotina contínua." },
+              { text: "Mais mulheres estão escolhendo o kit de 3 potes." },
+              { text: "Quem mantém constância percebe muito mais valor." },
+            ].map((item, i) => (
+              <div key={i} className="p-5 rounded-2xl bg-card/50 border border-border/40">
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BENEFÍCIOS */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
