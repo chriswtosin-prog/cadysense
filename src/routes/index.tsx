@@ -234,9 +234,10 @@ function Landing() {
       <section id="ofertas" className="py-24 bg-gradient-to-b from-[color:var(--cream)]/40 to-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Escolha sua rotina</span>
-            <h2 className="font-display text-4xl md:text-5xl font-medium mb-4">Comece sua <span className="italic text-gradient-rose">transformação</span> hoje</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">Quanto maior o kit, maior a economia — e mais consistente o resultado.</p>
+            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Escolha inteligente</span>
+            <h2 className="font-display text-4xl md:text-5xl font-medium mb-4">Comece sua nova <span className="italic text-gradient-rose">rotina</span> hoje</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">Quanto maior o kit, maior a economia — e mais consistente a sensação de bem-estar.</p>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto mt-2 italic">Mais mulheres estão escolhendo o kit de 3 potes.</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-5 items-stretch">
@@ -245,20 +246,21 @@ function Landing() {
               <div className="relative w-full p-7 rounded-3xl bg-card border border-border/60 flex flex-col lg:hover:animate-float-button transition-all opacity-95">
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Teste inicial</div>
                 <h3 className="font-display text-3xl mb-1">1 Pote</h3>
-                <p className="text-sm text-muted-foreground mb-5">Ideal para conhecer</p>
+                <p className="text-sm text-muted-foreground mb-2">Ideal apenas para começar.</p>
+                <p className="text-xs text-muted-foreground mb-5">Para quem deseja apenas testar.</p>
                 <div className="mb-5">
                   <div className="text-xs text-muted-foreground line-through">De R$ 137,90</div>
                   <div className="font-display text-4xl font-semibold">R$ 79,90</div>
                 </div>
                 <ul className="space-y-2 mb-6 text-sm flex-1">
-                  {["Uso inicial", "Comece sua rotina", "Ideal para conhecer"].map(b => (
+                  {["Entrada básica", "Para conhecer apenas", "Teste rápido"].map(b => (
                     <li key={b} className="flex items-center gap-2 text-muted-foreground">
                       <Check className="w-4 h-4 text-[color:var(--gold)]" /> {b}
                     </li>
                   ))}
                 </ul>
                 <a href={CHECKOUT_1} className="w-full text-center py-3 rounded-full border border-border hover:border-[color:var(--rose)]/40 hover:bg-secondary transition-all text-sm font-medium">
-                  QUERO TESTAR
+                  QUERO CONHECER
                 </a>
               </div>
             </div>
@@ -268,7 +270,7 @@ function Landing() {
               <div className="absolute -inset-1 bg-gradient-premium rounded-[2rem] opacity-70 blur-md animate-pulse-glow" />
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                 <div className="bg-gradient-premium text-white px-5 py-1.5 rounded-full text-xs font-bold tracking-wider shadow-premium flex items-center gap-1.5">
-                  <Star className="w-3.5 h-3.5 fill-current" /> MAIS ESCOLHIDO
+                  <Star className="w-3.5 h-3.5 fill-current" /> ⭐ MAIS ESCOLHIDO
                 </div>
               </div>
               <div className="relative w-full p-8 rounded-3xl bg-card border-2 border-[color:var(--gold)]/50 shadow-premium flex flex-col overflow-hidden">
@@ -276,9 +278,10 @@ function Landing() {
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-rose opacity-15 blur-3xl rounded-full" />
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-gold" />
                 <div className="relative">
-                  <div className="text-xs uppercase tracking-widest text-[color:var(--rose)] font-semibold mb-2">Rotina completa</div>
+                  <div className="text-xs uppercase tracking-widest text-[color:var(--rose)] font-semibold mb-2">A decisão inteligente</div>
                   <h3 className="font-display text-4xl font-semibold mb-1">3 Potes</h3>
-                  <p className="text-sm text-muted-foreground mb-5">A escolha das mulheres que se cuidam</p>
+                  <p className="text-sm text-muted-foreground mb-2">A melhor escolha das mulheres.</p>
+                  <p className="text-xs text-muted-foreground mb-5">Mais indicado para rotina contínua.</p>
                   <div className="mb-2">
                     <div className="text-xs text-muted-foreground line-through">De R$ 279,80</div>
                     <div className="font-display text-5xl font-semibold text-gradient-rose">R$ 197,90</div>
@@ -288,11 +291,14 @@ function Landing() {
                       <Sparkles className="w-3 h-3" /> Economize R$ 81,90
                     </div>
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-gold text-white text-xs font-semibold">
-                      ✨ Escolha inteligente
+                      ✨ Melhor custo-benefício
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[color:var(--rose)]/20 text-[color:var(--rose-deep)] text-xs font-semibold">
+                      ⭐ Maior escolha das clientes
                     </div>
                   </div>
                   <ul className="space-y-2.5 mb-6 text-sm flex-1">
-                    {["Frete grátis", "Melhor custo-benefício", "Rotina recomendada", "Mais praticidade"].map(b => (
+                    {["Frete grátis", "Melhor investimento", "Rotina contínua recomendada", "Quem escolhe 3 potes costuma manter muito mais constância."].map(b => (
                       <li key={b} className="flex items-center gap-2">
                         <span className="w-5 h-5 rounded-full bg-gradient-gold flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-white" />
@@ -302,7 +308,7 @@ function Landing() {
                     ))}
                   </ul>
                   <a href={CHECKOUT_3} className="btn-premium block text-center py-4 rounded-full font-bold tracking-wide">
-                    QUERO MINHA ROTINA
+                    QUERO MINHA ROTINA COMPLETA
                   </a>
                 </div>
               </div>
@@ -319,7 +325,7 @@ function Landing() {
                 </div>
                 <div className="mt-3 text-xs uppercase tracking-widest text-[color:var(--gold)] font-semibold mb-2">Rotina contínua</div>
                 <h3 className="font-display text-3xl mb-1">5 Potes</h3>
-                <p className="text-sm text-muted-foreground mb-5">Para uso prolongado</p>
+                <p className="text-sm text-muted-foreground mb-5">Para quem quer constância real.</p>
                 <div className="mb-2">
                   <div className="text-xs text-muted-foreground line-through">De R$ 499,90</div>
                   <div className="font-display text-4xl font-semibold">R$ 297,90</div>
@@ -328,14 +334,14 @@ function Landing() {
                   <Crown className="w-3 h-3" /> Maior economia por unidade
                 </div>
                 <ul className="space-y-2 mb-6 text-sm flex-1">
-                  {["Frete grátis", "Maior economia", "Uso prolongado", "Melhor valor por pote"].map(b => (
+                  {["Frete grátis", "Maior economia", "Constância prolongada", "Quem mantém constância percebe muito mais valor."].map(b => (
                     <li key={b} className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-[color:var(--gold)]" /> {b}
                     </li>
                   ))}
                 </ul>
                 <a href={CHECKOUT_5} className="btn-gold block text-center py-3.5 rounded-full font-semibold tracking-wide">
-                  Garantir melhor oferta
+                  Garantir constância
                 </a>
               </div>
             </div>
