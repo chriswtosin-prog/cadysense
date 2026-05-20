@@ -193,11 +193,11 @@ function Landing() {
         <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
           <Sparkles className="w-8 h-8 mx-auto mb-6 text-[color:var(--gold-soft)]" />
           <h2 className="font-display text-4xl md:text-6xl font-medium leading-tight mb-6">
-            Não é apenas um suplemento. <br />
-            <span className="italic text-gradient-gold">É uma nova forma de se sentir.</span>
+            Você merece voltar <br />
+            <span className="italic text-gradient-gold">a se sentir bem.</span>
           </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
-            Cadysense foi desenvolvido para mulheres que não querem mais conviver com desconfortos silenciosos na rotina.
+            O primeiro passo é parar de ignorar os sinais. Pequenos hábitos criam grandes mudanças.
           </p>
         </div>
       </section>
