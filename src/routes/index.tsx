@@ -207,16 +207,16 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-4 block">Benefícios</span>
-            <h2 className="font-display text-4xl md:text-5xl font-medium">Feito para sua <span className="italic text-gradient-rose">rotina</span></h2>
+            <h2 className="font-display text-4xl md:text-5xl font-medium">Mais do que cuidado. <span className="italic text-gradient-rose">Sensação.</span></h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: Heart, title: "Mais conforto no dia a dia", text: "Pensado para o bem-estar feminino diário." },
-              { icon: Sparkles, title: "Sensação de equilíbrio", text: "Sinta-se mais leve e em harmonia." },
-              { icon: Clock, title: "Rotina feminina prática", text: "Apenas 2 cápsulas por dia." },
-              { icon: Leaf, title: "Bem-estar íntimo", text: "Suporte para o conforto contínuo." },
-              { icon: Crown, title: "Fórmula premium", text: "Ingredientes selecionados com cuidado." },
-              { icon: ShieldCheck, title: "Uso contínuo", text: "Resultados que acompanham sua jornada." },
+              { icon: Heart, title: "Mais conforto e leveza no dia a dia", text: "Sinta a diferença em como você vive cada momento." },
+              { icon: Sparkles, title: "Sensação de equilíbrio novamente", text: "Recupere aquela sensação de estar no controle." },
+              { icon: Clock, title: "Mais confiança na própria rotina", text: "Siga seus dias com tranquilidade e segurança." },
+              { icon: Leaf, title: "Pare de ignorar sinais que afetam como você se sente", text: "Seu corpo merece atenção e cuidado verdadeiro." },
+              { icon: Crown, title: "Fórmula premium feminina", text: "Ingredientes selecionados com cuidado para você." },
+              { icon: ShieldCheck, title: "Pequenos hábitos que fazem grande diferença", text: "Apenas 2 cápsulas por dia para uma nova rotina." },
             ].map((b, i) => (
               <div key={i} className="group p-7 rounded-3xl bg-card border border-border/60 hover:border-[color:var(--rose)]/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-premium">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[color:var(--cream)] to-[color:var(--gold-soft)]/60 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
