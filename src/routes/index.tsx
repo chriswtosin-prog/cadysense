@@ -350,7 +350,7 @@ function Landing() {
           <div className="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[color:var(--gold)]" /> Compra 100% segura</div>
             <div className="flex items-center gap-2"><Truck className="w-4 h-4 text-[color:var(--gold)]" /> Frete grátis nos kits</div>
-            <div className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-[color:var(--gold)]" /> Fórmula premium</div>
+            <div className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-[color:var(--gold)]" /> A escolha mais indicada para rotina contínua</div>
           </div>
         </div>
       </section>
