@@ -118,20 +118,19 @@ function Landing() {
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.95_0.03_15_/_0.5),transparent_70%)]" />
         <div className="max-w-5xl mx-auto px-6 text-center relative">
-          <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-6 block">Você merece sentir-se bem</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-6 block">Seu corpo sente sua rotina</span>
           <h2 className="font-display text-4xl md:text-6xl font-medium leading-tight mb-6">
-            Quando você não se sente confortável, <br />
-            <span className="italic text-gradient-rose">sua confiança muda.</span>
+            Imagine parar de pensar <br />
+            <span className="italic text-gradient-rose">nisso o tempo todo.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed">
-            Seu bem-estar íntimo afeta sua rotina inteira — seu humor, sua presença, sua segurança.
-            Você merece se sentir segura novamente.
+            Quando você começa a se sentir bem novamente… tudo ao redor muda também.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Heart, title: "Chega de ignorar sinais", text: "Pequenos desconfortos impactam todo o seu dia." },
-              { icon: Sparkles, title: "Pequenos hábitos", text: "Podem mudar completamente como você se sente." },
-              { icon: Leaf, title: "Equilíbrio diário", text: "Uma rotina pensada para você se cuidar de verdade." },
+              { icon: Heart, title: "Imagine voltar a se sentir confortável", text: "Pequenos desconfortos não precisam fazer parte do seu dia." },
+              { icon: Sparkles, title: "Quando você se sente bem, sua energia muda", text: "Você percebe diferença até na forma como se olha." },
+              { icon: Leaf, title: "Você volta a se sentir segura", text: "Segurança e leveza que só quem viveu sabe o valor." },
             ].map((c, i) => (
               <div key={i} className="group p-8 rounded-3xl bg-card border border-border/60 shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-1">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-gold flex items-center justify-center mb-5 mx-auto">
