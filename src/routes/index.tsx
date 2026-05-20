@@ -60,29 +60,35 @@ function Landing() {
               <span className="text-xs tracking-wider uppercase text-muted-foreground">Bem-estar feminino premium</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] mb-6">
-              Pare de aceitar <br />
-              <span className="italic text-gradient-rose">desconfortos</span> como algo normal.
+              Tem coisas que você sente… <br />
+              <span className="italic text-gradient-rose">mas aprende a fingir</span> que não incomodam.
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-              Cadysense foi desenvolvido para mulheres que desejam recuperar a sensação de equilíbrio, conforto e confiança no dia a dia.
+            <p className="text-lg text-muted-foreground max-w-xl mb-4 leading-relaxed">
+              Pequenos desconfortos começam aos poucos… até fazerem parte da sua rotina, da sua confiança e até da forma como você se sente no próprio corpo.
             </p>
-            <ul className="grid sm:grid-cols-2 gap-3 mb-8">
-              {["Mais conforto íntimo", "Sensação de equilíbrio", "Rotina prática diária", "Fórmula premium feminina"].map(b => (
-                <li key={b} className="flex items-center gap-2 text-sm">
-                  <span className="w-5 h-5 rounded-full bg-gradient-gold flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-white" />
-                  </span>
+            <p className="text-base text-muted-foreground max-w-xl mb-6 leading-relaxed italic">
+              E muitas mulheres passam tempo demais tentando simplesmente ignorar isso.
+            </p>
+            <div className="space-y-2 mb-8">
+              {[
+                "Você pensa nisso mais do que gostaria.",
+                "Você tenta seguir normalmente… mas sente.",
+                "Tem dias que isso afeta até sua confiança.",
+                "Seu corpo dá sinais o tempo inteiro."
+              ].map((b, i) => (
+                <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="text-[color:var(--rose)] mt-0.5">·</span>
                   {b}
-                </li>
+                </p>
               ))}
-            </ul>
-            <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--rose)] mb-3 font-medium">
-              ✦ Milhares de mulheres já transformaram a própria rotina
-            </p>
+            </div>
             <a href="#ofertas" className="btn-premium inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold tracking-wide animate-pulse-glow text-sm md:text-base">
-              QUERO RECUPERAR MEU EQUILÍBRIO
+              QUERO VOLTAR A ME SENTIR BEM
               <ArrowRight className="w-4 h-4" />
             </a>
+            <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--rose)] mt-4 font-medium">
+              ✦ Milhares de mulheres já decidiram priorizar o próprio bem-estar
+            </p>
             <div className="mt-8 flex items-center gap-6 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[color:var(--gold)]" /> Compra segura</div>
               <div className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-[color:var(--gold)]" /> Frete grátis nos kits</div>
