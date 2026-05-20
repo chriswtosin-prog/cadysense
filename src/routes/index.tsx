@@ -148,12 +148,15 @@ function Landing() {
       <section className="py-24 bg-gradient-to-b from-transparent via-[color:var(--cream)] to-transparent">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Fórmula</span>
+            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Fórmula Premium</span>
             <h2 className="font-display text-4xl md:text-5xl font-medium leading-tight mb-5 max-w-3xl mx-auto">
-              A fórmula premium que está conquistando <span className="italic text-gradient-rose">milhares de mulheres</span>
+              A combinação que está transformando <span className="italic text-gradient-rose">a rotina de milhares de mulheres</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ingredientes cuidadosamente selecionados para elevar sua rotina de autocuidado feminino.
+              Ingredientes cuidadosamente selecionados para mulheres que decidiram voltar a priorizar o próprio bem-estar.
+            </p>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto mt-4 italic">
+              Não é apenas um suplemento. É uma nova relação com sua rotina.
             </p>
             <div className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full bg-card border border-border">
               <Clock className="w-4 h-4 text-[color:var(--gold)]" />
@@ -163,11 +166,11 @@ function Landing() {
 
           <div className="grid md:grid-cols-2 gap-5">
             {[
-              { name: "Feno-grego", dose: "240mg", desc: "Ingrediente tradicional presente em rotinas femininas de equilíbrio e bem-estar." },
-              { name: "Beta-glucana", dose: "200mg", desc: "Componente amplamente utilizado em fórmulas modernas de cuidado contínuo." },
-              { name: "Cranberry", dose: "300mg", desc: "Um dos ingredientes mais conhecidos quando o assunto é rotina íntima feminina." },
-              { name: "Extrato de Alho", dose: "160mg", desc: "Ingrediente natural utilizado em estratégias de cuidado diário." },
-              { name: "Própolis", dose: "60mg", desc: "Componente tradicional associado ao autocuidado contínuo." },
+              { name: "Feno-grego", dose: "240mg", desc: "Tradicionally presente em rotinas femininas de equilíbrio e bem-estar." },
+              { name: "Beta-glucana", dose: "200mg", desc: "Componente sofisticado amplamente utilizado em fórmulas modernas de cuidado contínuo." },
+              { name: "Cranberry", dose: "300mg", desc: "Um dos ingredientes mais reconhecidos em rotinas íntimas femininas premium." },
+              { name: "Extrato de Alho", dose: "160mg", desc: "Ingrediente natural selecionado para estratégias de cuidado diário inteligente." },
+              { name: "Própolis", dose: "60mg", desc: "Componente tradicional associado ao autocuidado contínuo de mulheres que se priorizam." },
             ].map((ing, i) => (
               <div key={i} className="group relative p-7 rounded-3xl bg-card border border-border/60 hover:border-[color:var(--gold)]/50 transition-all duration-500 hover:shadow-premium overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-gold opacity-10 blur-2xl rounded-full group-hover:opacity-25 transition-opacity" />
