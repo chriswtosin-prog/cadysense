@@ -44,7 +44,7 @@ function Landing() {
             <span className="font-display text-xl font-semibold tracking-tight">Cadysense</span>
           </div>
           <a href="#ofertas" className="btn-premium px-5 py-2.5 rounded-full text-sm font-medium hidden sm:inline-flex items-center">
-            Quero recuperar meu equilíbrio
+            Quero me sentir bem novamente
           </a>
         </div>
       </header>
