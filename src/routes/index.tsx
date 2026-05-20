@@ -44,7 +44,7 @@ function Landing() {
             <span className="font-display text-xl font-semibold tracking-tight">Cadysense</span>
           </div>
           <a href="#ofertas" className="btn-premium px-5 py-2.5 rounded-full text-sm font-medium hidden sm:inline-flex items-center">
-            Quero recuperar meu equilíbrio
+            Quero me sentir bem novamente
           </a>
         </div>
       </header>
@@ -60,29 +60,35 @@ function Landing() {
               <span className="text-xs tracking-wider uppercase text-muted-foreground">Bem-estar feminino premium</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] mb-6">
-              Pare de aceitar <br />
-              <span className="italic text-gradient-rose">desconfortos</span> como algo normal.
+              Tem coisas que você sente… <br />
+              <span className="italic text-gradient-rose">mas aprende a fingir</span> que não incomodam.
             </h1>
-            <p className="text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
-              Cadysense foi desenvolvido para mulheres que desejam recuperar a sensação de equilíbrio, conforto e confiança no dia a dia.
+            <p className="text-lg text-muted-foreground max-w-xl mb-4 leading-relaxed">
+              Pequenos desconfortos começam aos poucos… até fazerem parte da sua rotina, da sua confiança e até da forma como você se sente no próprio corpo.
             </p>
-            <ul className="grid sm:grid-cols-2 gap-3 mb-8">
-              {["Mais conforto íntimo", "Sensação de equilíbrio", "Rotina prática diária", "Fórmula premium feminina"].map(b => (
-                <li key={b} className="flex items-center gap-2 text-sm">
-                  <span className="w-5 h-5 rounded-full bg-gradient-gold flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-white" />
-                  </span>
+            <p className="text-base text-muted-foreground max-w-xl mb-6 leading-relaxed italic">
+              E muitas mulheres passam tempo demais tentando simplesmente ignorar isso.
+            </p>
+            <div className="space-y-2 mb-8">
+              {[
+                "Você pensa nisso mais do que gostaria.",
+                "Você tenta seguir normalmente… mas sente.",
+                "Tem dias que isso afeta até sua confiança.",
+                "Seu corpo dá sinais o tempo inteiro."
+              ].map((b, i) => (
+                <p key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                  <span className="text-[color:var(--rose)] mt-0.5">·</span>
                   {b}
-                </li>
+                </p>
               ))}
-            </ul>
-            <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--rose)] mb-3 font-medium">
-              ✦ Milhares de mulheres já transformaram a própria rotina
-            </p>
+            </div>
             <a href="#ofertas" className="btn-premium inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold tracking-wide animate-pulse-glow text-sm md:text-base">
-              QUERO RECUPERAR MEU EQUILÍBRIO
+              QUERO VOLTAR A ME SENTIR BEM
               <ArrowRight className="w-4 h-4" />
             </a>
+            <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--rose)] mt-4 font-medium">
+              ✦ Milhares de mulheres já decidiram priorizar o próprio bem-estar
+            </p>
             <div className="mt-8 flex items-center gap-6 text-xs text-muted-foreground">
               <div className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-[color:var(--gold)]" /> Compra segura</div>
               <div className="flex items-center gap-1.5"><Truck className="w-4 h-4 text-[color:var(--gold)]" /> Frete grátis nos kits</div>
@@ -112,20 +118,19 @@ function Landing() {
       <section className="py-24 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.95_0.03_15_/_0.5),transparent_70%)]" />
         <div className="max-w-5xl mx-auto px-6 text-center relative">
-          <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-6 block">Você merece sentir-se bem</span>
+          <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-6 block">Seu corpo sente sua rotina</span>
           <h2 className="font-display text-4xl md:text-6xl font-medium leading-tight mb-6">
-            Quando você não se sente confortável, <br />
-            <span className="italic text-gradient-rose">sua confiança muda.</span>
+            Imagine parar de pensar <br />
+            <span className="italic text-gradient-rose">nisso o tempo todo.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed">
-            Seu bem-estar íntimo afeta sua rotina inteira — seu humor, sua presença, sua segurança.
-            Você merece se sentir segura novamente.
+            Quando você começa a se sentir bem novamente… tudo ao redor muda também.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Heart, title: "Chega de ignorar sinais", text: "Pequenos desconfortos impactam todo o seu dia." },
-              { icon: Sparkles, title: "Pequenos hábitos", text: "Podem mudar completamente como você se sente." },
-              { icon: Leaf, title: "Equilíbrio diário", text: "Uma rotina pensada para você se cuidar de verdade." },
+              { icon: Heart, title: "Imagine voltar a se sentir confortável", text: "Pequenos desconfortos não precisam fazer parte do seu dia." },
+              { icon: Sparkles, title: "Quando você se sente bem, sua energia muda", text: "Você percebe diferença até na forma como se olha." },
+              { icon: Leaf, title: "Você volta a se sentir segura", text: "Segurança e leveza que só quem viveu sabe o valor." },
             ].map((c, i) => (
               <div key={i} className="group p-8 rounded-3xl bg-card border border-border/60 shadow-soft hover:shadow-premium transition-all duration-500 hover:-translate-y-1">
                 <div className="w-12 h-12 rounded-2xl bg-gradient-gold flex items-center justify-center mb-5 mx-auto">
@@ -143,12 +148,15 @@ function Landing() {
       <section className="py-24 bg-gradient-to-b from-transparent via-[color:var(--cream)] to-transparent">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Fórmula</span>
+            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Fórmula Premium</span>
             <h2 className="font-display text-4xl md:text-5xl font-medium leading-tight mb-5 max-w-3xl mx-auto">
-              A fórmula premium que está conquistando <span className="italic text-gradient-rose">milhares de mulheres</span>
+              A combinação que está transformando <span className="italic text-gradient-rose">a rotina de milhares de mulheres</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Ingredientes cuidadosamente selecionados para elevar sua rotina de autocuidado feminino.
+              Ingredientes cuidadosamente selecionados para mulheres que decidiram voltar a priorizar o próprio bem-estar.
+            </p>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto mt-4 italic">
+              Não é apenas um suplemento. É uma nova relação com sua rotina.
             </p>
             <div className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded-full bg-card border border-border">
               <Clock className="w-4 h-4 text-[color:var(--gold)]" />
@@ -158,11 +166,11 @@ function Landing() {
 
           <div className="grid md:grid-cols-2 gap-5">
             {[
-              { name: "Feno-grego", dose: "240mg", desc: "Ingrediente tradicional presente em rotinas femininas de equilíbrio e bem-estar." },
-              { name: "Beta-glucana", dose: "200mg", desc: "Componente amplamente utilizado em fórmulas modernas de cuidado contínuo." },
-              { name: "Cranberry", dose: "300mg", desc: "Um dos ingredientes mais conhecidos quando o assunto é rotina íntima feminina." },
-              { name: "Extrato de Alho", dose: "160mg", desc: "Ingrediente natural utilizado em estratégias de cuidado diário." },
-              { name: "Própolis", dose: "60mg", desc: "Componente tradicional associado ao autocuidado contínuo." },
+              { name: "Feno-grego", dose: "240mg", desc: "Tradicionally presente em rotinas femininas de equilíbrio e bem-estar." },
+              { name: "Beta-glucana", dose: "200mg", desc: "Componente sofisticado amplamente utilizado em fórmulas modernas de cuidado contínuo." },
+              { name: "Cranberry", dose: "300mg", desc: "Um dos ingredientes mais reconhecidos em rotinas íntimas femininas premium." },
+              { name: "Extrato de Alho", dose: "160mg", desc: "Ingrediente natural selecionado para estratégias de cuidado diário inteligente." },
+              { name: "Própolis", dose: "60mg", desc: "Componente tradicional associado ao autocuidado contínuo de mulheres que se priorizam." },
             ].map((ing, i) => (
               <div key={i} className="group relative p-7 rounded-3xl bg-card border border-border/60 hover:border-[color:var(--gold)]/50 transition-all duration-500 hover:shadow-premium overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-gold opacity-10 blur-2xl rounded-full group-hover:opacity-25 transition-opacity" />
@@ -185,12 +193,30 @@ function Landing() {
         <div className="relative max-w-4xl mx-auto px-6 text-center text-white">
           <Sparkles className="w-8 h-8 mx-auto mb-6 text-[color:var(--gold-soft)]" />
           <h2 className="font-display text-4xl md:text-6xl font-medium leading-tight mb-6">
-            Não é apenas um suplemento. <br />
-            <span className="italic text-gradient-gold">É uma nova forma de se sentir.</span>
+            Você merece voltar <br />
+            <span className="italic text-gradient-gold">a se sentir bem.</span>
           </h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
-            Cadysense foi desenvolvido para mulheres que não querem mais conviver com desconfortos silenciosos na rotina.
+            O primeiro passo é parar de ignorar os sinais. Pequenos hábitos criam grandes mudanças.
           </p>
+        </div>
+      </section>
+
+      {/* CREDIBILIDADE */}
+      <section className="py-16 relative">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            {[
+              { text: "Milhares de mulheres já adicionaram o Cadysense na rotina." },
+              { text: "A escolha mais indicada para rotina contínua." },
+              { text: "Mais mulheres estão escolhendo o kit de 3 potes." },
+              { text: "Quem mantém constância percebe muito mais valor." },
+            ].map((item, i) => (
+              <div key={i} className="p-5 rounded-2xl bg-card/50 border border-border/40">
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -199,16 +225,16 @@ function Landing() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--rose)] mb-4 block">Benefícios</span>
-            <h2 className="font-display text-4xl md:text-5xl font-medium">Feito para sua <span className="italic text-gradient-rose">rotina</span></h2>
+            <h2 className="font-display text-4xl md:text-5xl font-medium">Mais do que cuidado. <span className="italic text-gradient-rose">Sensação.</span></h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
-              { icon: Heart, title: "Mais conforto no dia a dia", text: "Pensado para o bem-estar feminino diário." },
-              { icon: Sparkles, title: "Sensação de equilíbrio", text: "Sinta-se mais leve e em harmonia." },
-              { icon: Clock, title: "Rotina feminina prática", text: "Apenas 2 cápsulas por dia." },
-              { icon: Leaf, title: "Bem-estar íntimo", text: "Suporte para o conforto contínuo." },
-              { icon: Crown, title: "Fórmula premium", text: "Ingredientes selecionados com cuidado." },
-              { icon: ShieldCheck, title: "Uso contínuo", text: "Resultados que acompanham sua jornada." },
+              { icon: Heart, title: "Mais conforto e leveza no dia a dia", text: "Sinta a diferença em como você vive cada momento." },
+              { icon: Sparkles, title: "Sensação de equilíbrio novamente", text: "Recupere aquela sensação de estar no controle." },
+              { icon: Clock, title: "Mais confiança na própria rotina", text: "Siga seus dias com tranquilidade e segurança." },
+              { icon: Leaf, title: "Pare de ignorar sinais que afetam como você se sente", text: "Seu corpo merece atenção e cuidado verdadeiro." },
+              { icon: Crown, title: "Fórmula premium feminina", text: "Ingredientes selecionados com cuidado para você." },
+              { icon: ShieldCheck, title: "Pequenos hábitos que fazem grande diferença", text: "Apenas 2 cápsulas por dia para uma nova rotina." },
             ].map((b, i) => (
               <div key={i} className="group p-7 rounded-3xl bg-card border border-border/60 hover:border-[color:var(--rose)]/40 transition-all duration-500 hover:-translate-y-1 hover:shadow-premium">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[color:var(--cream)] to-[color:var(--gold-soft)]/60 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -226,9 +252,10 @@ function Landing() {
       <section id="ofertas" className="py-24 bg-gradient-to-b from-[color:var(--cream)]/40 to-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-14">
-            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Escolha sua rotina</span>
-            <h2 className="font-display text-4xl md:text-5xl font-medium mb-4">Comece sua <span className="italic text-gradient-rose">transformação</span> hoje</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">Quanto maior o kit, maior a economia — e mais consistente o resultado.</p>
+            <span className="text-xs tracking-[0.3em] uppercase text-[color:var(--gold)] mb-4 block">Escolha inteligente</span>
+            <h2 className="font-display text-4xl md:text-5xl font-medium mb-4">Comece sua nova <span className="italic text-gradient-rose">rotina</span> hoje</h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">Quanto maior o kit, maior a economia — e mais consistente a sensação de bem-estar.</p>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto mt-2 italic">Mais mulheres estão escolhendo o kit de 3 potes.</p>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-6 lg:gap-5 items-stretch">
@@ -237,20 +264,21 @@ function Landing() {
               <div className="relative w-full p-7 rounded-3xl bg-card border border-border/60 flex flex-col lg:hover:animate-float-button transition-all opacity-95">
                 <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Teste inicial</div>
                 <h3 className="font-display text-3xl mb-1">1 Pote</h3>
-                <p className="text-sm text-muted-foreground mb-5">Ideal para conhecer</p>
+                <p className="text-sm text-muted-foreground mb-2">Ideal apenas para começar.</p>
+                <p className="text-xs text-muted-foreground mb-5">Para quem deseja apenas testar.</p>
                 <div className="mb-5">
                   <div className="text-xs text-muted-foreground line-through">De R$ 137,90</div>
                   <div className="font-display text-4xl font-semibold">R$ 79,90</div>
                 </div>
                 <ul className="space-y-2 mb-6 text-sm flex-1">
-                  {["Uso inicial", "Comece sua rotina", "Ideal para conhecer"].map(b => (
+                  {["Entrada básica", "Para conhecer apenas", "Teste rápido"].map(b => (
                     <li key={b} className="flex items-center gap-2 text-muted-foreground">
                       <Check className="w-4 h-4 text-[color:var(--gold)]" /> {b}
                     </li>
                   ))}
                 </ul>
                 <a href={CHECKOUT_1} className="w-full text-center py-3 rounded-full border border-border hover:border-[color:var(--rose)]/40 hover:bg-secondary transition-all text-sm font-medium">
-                  QUERO TESTAR
+                  QUERO CONHECER
                 </a>
               </div>
             </div>
@@ -260,7 +288,7 @@ function Landing() {
               <div className="absolute -inset-1 bg-gradient-premium rounded-[2rem] opacity-70 blur-md animate-pulse-glow" />
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
                 <div className="bg-gradient-premium text-white px-5 py-1.5 rounded-full text-xs font-bold tracking-wider shadow-premium flex items-center gap-1.5">
-                  <Star className="w-3.5 h-3.5 fill-current" /> MAIS ESCOLHIDO
+                  <Star className="w-3.5 h-3.5 fill-current" /> ⭐ MAIS ESCOLHIDO
                 </div>
               </div>
               <div className="relative w-full p-8 rounded-3xl bg-card border-2 border-[color:var(--gold)]/50 shadow-premium flex flex-col overflow-hidden">
@@ -268,9 +296,10 @@ function Landing() {
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-gradient-rose opacity-15 blur-3xl rounded-full" />
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-gold" />
                 <div className="relative">
-                  <div className="text-xs uppercase tracking-widest text-[color:var(--rose)] font-semibold mb-2">Rotina completa</div>
+                  <div className="text-xs uppercase tracking-widest text-[color:var(--rose)] font-semibold mb-2">A decisão inteligente</div>
                   <h3 className="font-display text-4xl font-semibold mb-1">3 Potes</h3>
-                  <p className="text-sm text-muted-foreground mb-5">A escolha das mulheres que se cuidam</p>
+                  <p className="text-sm text-muted-foreground mb-2">A melhor escolha das mulheres.</p>
+                  <p className="text-xs text-muted-foreground mb-5">Mais indicado para rotina contínua.</p>
                   <div className="mb-2">
                     <div className="text-xs text-muted-foreground line-through">De R$ 279,80</div>
                     <div className="font-display text-5xl font-semibold text-gradient-rose">R$ 197,90</div>
@@ -280,11 +309,14 @@ function Landing() {
                       <Sparkles className="w-3 h-3" /> Economize R$ 81,90
                     </div>
                     <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-gold text-white text-xs font-semibold">
-                      ✨ Escolha inteligente
+                      ✨ Melhor custo-benefício
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[color:var(--rose)]/20 text-[color:var(--rose-deep)] text-xs font-semibold">
+                      ⭐ Maior escolha das clientes
                     </div>
                   </div>
                   <ul className="space-y-2.5 mb-6 text-sm flex-1">
-                    {["Frete grátis", "Melhor custo-benefício", "Rotina recomendada", "Mais praticidade"].map(b => (
+                    {["Frete grátis", "Melhor investimento", "Rotina contínua recomendada", "Quem escolhe 3 potes costuma manter muito mais constância."].map(b => (
                       <li key={b} className="flex items-center gap-2">
                         <span className="w-5 h-5 rounded-full bg-gradient-gold flex items-center justify-center shrink-0">
                           <Check className="w-3 h-3 text-white" />
@@ -294,7 +326,7 @@ function Landing() {
                     ))}
                   </ul>
                   <a href={CHECKOUT_3} className="btn-premium block text-center py-4 rounded-full font-bold tracking-wide">
-                    QUERO MINHA ROTINA
+                    QUERO MINHA ROTINA COMPLETA
                   </a>
                 </div>
               </div>
@@ -311,7 +343,7 @@ function Landing() {
                 </div>
                 <div className="mt-3 text-xs uppercase tracking-widest text-[color:var(--gold)] font-semibold mb-2">Rotina contínua</div>
                 <h3 className="font-display text-3xl mb-1">5 Potes</h3>
-                <p className="text-sm text-muted-foreground mb-5">Para uso prolongado</p>
+                <p className="text-sm text-muted-foreground mb-5">Para quem quer constância real.</p>
                 <div className="mb-2">
                   <div className="text-xs text-muted-foreground line-through">De R$ 499,90</div>
                   <div className="font-display text-4xl font-semibold">R$ 297,90</div>
@@ -320,14 +352,14 @@ function Landing() {
                   <Crown className="w-3 h-3" /> Maior economia por unidade
                 </div>
                 <ul className="space-y-2 mb-6 text-sm flex-1">
-                  {["Frete grátis", "Maior economia", "Uso prolongado", "Melhor valor por pote"].map(b => (
+                  {["Frete grátis", "Maior economia", "Constância prolongada", "Quem mantém constância percebe muito mais valor."].map(b => (
                     <li key={b} className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-[color:var(--gold)]" /> {b}
                     </li>
                   ))}
                 </ul>
                 <a href={CHECKOUT_5} className="btn-gold block text-center py-3.5 rounded-full font-semibold tracking-wide">
-                  Garantir melhor oferta
+                  Garantir constância
                 </a>
               </div>
             </div>
@@ -336,7 +368,7 @@ function Landing() {
           <div className="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
             <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[color:var(--gold)]" /> Compra 100% segura</div>
             <div className="flex items-center gap-2"><Truck className="w-4 h-4 text-[color:var(--gold)]" /> Frete grátis nos kits</div>
-            <div className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-[color:var(--gold)]" /> Fórmula premium</div>
+            <div className="flex items-center gap-2"><Sparkles className="w-4 h-4 text-[color:var(--gold)]" /> A escolha mais indicada para rotina contínua</div>
           </div>
         </div>
       </section>
@@ -366,7 +398,7 @@ function Landing() {
           href="#ofertas"
           className="btn-premium flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold tracking-wide shadow-premium animate-pulse-glow text-sm md:text-base"
         >
-          QUERO MINHA ROTINA
+          QUERO ME SENTIR BEM
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>
