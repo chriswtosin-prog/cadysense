@@ -380,7 +380,7 @@ function Landing() {
           href="#ofertas"
           className="btn-premium flex items-center justify-center gap-2 px-6 py-4 rounded-full font-bold tracking-wide shadow-premium animate-pulse-glow text-sm md:text-base"
         >
-          QUERO MINHA ROTINA
+          QUERO ME SENTIR BEM
           <ArrowRight className="w-4 h-4" />
         </a>
       </div>
