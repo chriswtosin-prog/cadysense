@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "cadysense" },
+      { name: "description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "cadysense" },
+      { property: "og:description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "cadysense" },
+      { name: "twitter:description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
     ],
     links: [
       {
