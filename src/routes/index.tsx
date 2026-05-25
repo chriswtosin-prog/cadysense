@@ -11,6 +11,18 @@ import print1 from "@/assets/print-cliente-1.png";
 import print2 from "@/assets/print-cliente-2.png";
 import print3 from "@/assets/print-cliente-3.png";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+function trackCheckout(contentName: string, value: number) {
+  if (typeof window !== "undefined" && window.fbq) {
+    window.fbq("track", "InitiateCheckout", { content_name: contentName, value, currency: "BRL" });
+  }
+}
+
 const OG_IMAGE = "https://cadysense.lovable.app/og-cadysense.jpg";
 
 export const Route = createFileRoute("/")({
