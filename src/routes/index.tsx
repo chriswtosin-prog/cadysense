@@ -538,12 +538,16 @@ function Offers() {
           ))}
         </ul>
 
-        <a href={CHECKOUT_1} target="_blank" rel="noopener noreferrer" className="btn-pink w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
+        <a href={CHECKOUT_1} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 1 Pote", 79.90)}
+          className="btn-pink w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
           Quero começar agora
         </a>
 
         <p className="text-xs text-center text-label mb-2">Prefere comprar pelo Mercado Livre?</p>
-        <a href={ML_1} target="_blank" rel="noopener noreferrer" className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
+        <a href={ML_1} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 1 Pote ML", 79.90)}
+          className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
           <MLIcon /> Comprar no Mercado Livre
         </a>
 
