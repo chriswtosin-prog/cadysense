@@ -11,6 +11,18 @@ import print1 from "@/assets/print-cliente-1.png";
 import print2 from "@/assets/print-cliente-2.png";
 import print3 from "@/assets/print-cliente-3.png";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+function trackCheckout(contentName: string, value: number) {
+  if (typeof window !== "undefined" && window.fbq) {
+    window.fbq("track", "InitiateCheckout", { content_name: contentName, value, currency: "BRL" });
+  }
+}
+
 const OG_IMAGE = "https://cadysense.lovable.app/og-cadysense.jpg";
 
 export const Route = createFileRoute("/")({
@@ -494,7 +506,6 @@ function Faq() {
 
 /* ---------- Offers ---------- */
 function Offers() {
-  const [bump, setBump] = useState(false);
   return (
     <div className="grid md:grid-cols-3 gap-6 md:gap-5 items-start">
       {/* 1 POTE — destaque */}
@@ -526,12 +537,16 @@ function Offers() {
           ))}
         </ul>
 
-        <a href={CHECKOUT_1} target="_blank" rel="noopener noreferrer" className="btn-pink w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
+        <a href={CHECKOUT_1} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 1 Pote", 79.90)}
+          className="btn-pink w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
           Quero começar agora
         </a>
 
         <p className="text-xs text-center text-label mb-2">Prefere comprar pelo Mercado Livre?</p>
-        <a href={ML_1} target="_blank" rel="noopener noreferrer" className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
+        <a href={ML_1} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 1 Pote ML", 79.90)}
+          className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
           <MLIcon /> Comprar no Mercado Livre
         </a>
 
@@ -539,11 +554,11 @@ function Offers() {
           Aviso: 1 pote dificilmente é suficiente para constância real. A maioria volta para o kit de 3.
         </p>
 
-        <div className="mt-4 pt-4 border-t border-[var(--border)]">
-          <label className="flex items-start gap-2 cursor-pointer text-xs text-muted">
-            <input type="checkbox" checked={bump} onChange={(e) => setBump(e.target.checked)} className="mt-0.5 accent-[var(--pink)]" />
-            <span>+ Sim, quero +2 potes por R$ 118,00 — e garantir constância real com frete grátis</span>
-          </label>
+        <div className="mt-4 flex items-start gap-2" style={{ background: "rgba(196,149,106,0.07)", border: "1px solid rgba(196,149,106,0.2)", padding: "10px 12px", borderRadius: "4px" }}>
+          <span style={{ fontSize: "14px", lineHeight: 1 }}>💡</span>
+          <p style={{ fontFamily: "Arial", fontSize: "8px", color: "#5A4838", lineHeight: 1.4, margin: 1 }}>
+            Dica: quem leva o <strong style={{ color: "#9E7250" }}>kit de 3 potes</strong> economiza <strong style={{ color: "#9E7250" }}>R$ 81,90</strong> e ganha frete grátis.
+          </p>
         </div>
       </div>
 
@@ -576,12 +591,16 @@ function Offers() {
           ))}
         </ul>
 
-        <a href={CHECKOUT_3} target="_blank" rel="noopener noreferrer" className="btn-dark w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
+        <a href={CHECKOUT_3} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 3 Potes", 197.90)}
+          className="btn-dark w-full py-3.5 rounded-full inline-flex items-center justify-center mb-3">
           Quero o kit completo
         </a>
 
         <p className="text-xs text-center text-label mb-2">Prefere comprar pelo Mercado Livre?</p>
-        <a href={ML_3} target="_blank" rel="noopener noreferrer" className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
+        <a href={ML_3} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 3 Potes ML", 197.90)}
+          className="btn-ml w-full py-3 rounded-full inline-flex items-center justify-center gap-2">
           <MLIcon /> Comprar no Mercado Livre
         </a>
       </div>
@@ -614,7 +633,9 @@ function Offers() {
           ))}
         </ul>
 
-        <a href={CHECKOUT_5} target="_blank" rel="noopener noreferrer" className="btn-outline-dark w-full py-3.5 rounded-full inline-flex items-center justify-center">
+        <a href={CHECKOUT_5} target="_blank" rel="noopener noreferrer"
+          onClick={() => trackCheckout("Cadysense 5 Potes", 297.90)}
+          className="btn-outline-dark w-full py-3.5 rounded-full inline-flex items-center justify-center">
           Quero a melhor oferta
         </a>
       </div>
