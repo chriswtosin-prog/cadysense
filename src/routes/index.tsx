@@ -544,12 +544,13 @@ function Offers() {
         <p className="text-pink text-xs font-medium mb-3">🔥 Mais de 4.800 pedidos este mês</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={400} height={400} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
           <p className="text-xs text-label line-through">De R$ 137,90</p>
           <p className="font-display text-5xl text-pink leading-none my-1">R$ 79,90</p>
+          <p className="text-[0.7rem] text-label mt-1">ou 12x de R$7,32 no cartão</p>
         </div>
 
         <div className="divider-gold my-4" />
