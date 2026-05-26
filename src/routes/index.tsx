@@ -576,7 +576,7 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Melhor custo-benefício para equilíbrio real.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
