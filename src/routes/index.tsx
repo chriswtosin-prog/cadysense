@@ -263,12 +263,12 @@ function Landing() {
 
         <div className="max-w-4xl mx-auto space-y-4 reveal">
           <div className="rounded-lg overflow-hidden border border-[var(--border)] bg-white">
-            <img src={print1} alt="Print cliente principal" loading="lazy" className="w-full h-auto" />
+            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={800} height={1729} className="w-full h-auto" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[print2, print3].map((p, i) => (
               <div key={i} className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
-                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" className="w-full h-full object-cover object-top" />
+                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={600} height={1297} className="w-full h-full object-cover object-top" />
                 <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
               </div>
             ))}
@@ -415,16 +415,18 @@ function Landing() {
 /* ---------- Hero ---------- */
 function Hero() {
   return (
-    <section className="pt-24 md:pt-28 pb-[60px] md:pb-[80px] px-5 md:px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="pt-20 md:pt-28 pb-[40px] md:pb-[80px] px-5 md:px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-5 md:gap-10 items-center">
         {/* Mobile: image first */}
         <div className="order-1 md:order-2 relative flex justify-center">
           <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(232,24,122,0.18),transparent_60%)]" />
           <img
             src={bottle1}
             alt="Pote Cadysense 60 cápsulas sobre pedestal de mármore"
-            className="relative animate-float-bottle w-[280px] md:w-[440px] drop-shadow-[0_25px_40px_rgba(100,60,20,0.25)]"
+            className="relative animate-float-bottle max-h-[280px] md:max-h-none w-auto md:w-[440px] drop-shadow-[0_25px_40px_rgba(100,60,20,0.25)]"
             fetchPriority="high"
+            loading="eager"
+            decoding="async"
             width={440}
             height={440}
           />
@@ -521,7 +523,7 @@ function Offers() {
         <p className="text-pink text-xs font-medium mb-3">🔥 Mais de 4.800 pedidos este mês</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
@@ -574,7 +576,7 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Melhor custo-benefício para equilíbrio real.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
@@ -617,7 +619,7 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Para quem já sabe que vai continuar.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[100px]">
-          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
