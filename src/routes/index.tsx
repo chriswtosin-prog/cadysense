@@ -41,6 +41,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       { rel: "preconnect", href: "https://connect.facebook.net" },
+      { rel: "dns-prefetch", href: "https://revitasense.mycartpanda.com" },
       { rel: "preload", as: "image", href: bottle1, fetchpriority: "high" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" },
     ],
