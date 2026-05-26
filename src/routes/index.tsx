@@ -263,7 +263,7 @@ function Landing() {
 
         <div className="max-w-4xl mx-auto space-y-4 reveal">
           <div className="rounded-lg overflow-hidden border border-[var(--border)] bg-white">
-            <img src={print1} alt="Print cliente principal" loading="lazy" className="w-full h-auto" />
+            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={800} height={1729} className="w-full h-auto" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[print2, print3].map((p, i) => (
