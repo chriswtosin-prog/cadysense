@@ -428,8 +428,8 @@ function Hero() {
             fetchPriority="high"
             loading="eager"
             decoding="async"
-            width={440}
-            height={440}
+            width={400}
+            height={400}
           />
         </div>
 
