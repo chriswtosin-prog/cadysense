@@ -619,7 +619,7 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Para quem já sabe que vai continuar.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[100px]">
-          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
