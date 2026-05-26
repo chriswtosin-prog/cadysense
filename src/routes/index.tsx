@@ -264,13 +264,20 @@ function Landing() {
 
         <div className="max-w-4xl mx-auto space-y-4 reveal">
           <div className="rounded-lg overflow-hidden border border-[var(--border)] bg-white">
-            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={800} height={1729} className="w-full h-auto" />
+            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={400} height={300} className="w-full h-auto" />
           </div>
+          <p className="text-center text-xs text-label italic">Cliente verificada — comprou o kit de 3 potes</p>
           <div className="grid grid-cols-2 gap-4">
-            {[print2, print3].map((p, i) => (
-              <div key={i} className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
-                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={600} height={1297} className="w-full h-full object-cover object-top" />
-                <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
+            {[
+              { src: print2, caption: "Cliente verificada — segunda compra" },
+              { src: print3, caption: "Cliente verificada — usa há 2 meses" },
+            ].map((item, i) => (
+              <div key={i}>
+                <div className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
+                  <img src={item.src} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={400} height={300} className="w-full h-full object-cover object-top" />
+                  <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
+                </div>
+                <p className="text-center text-xs text-label italic mt-2">{item.caption}</p>
               </div>
             ))}
           </div>
