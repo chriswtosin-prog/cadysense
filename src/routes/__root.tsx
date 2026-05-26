@@ -98,6 +98,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "cadysense" },
       { name: "twitter:description", content: "Para mulheres que já cansaram de tratar e ver voltar." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
     ],
     links: [
@@ -105,9 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-    ],
-    scripts: [
-      { children: META_PIXEL_SCRIPT },
+      { rel: "canonical", href: "https://cadysense.lovable.app/" },
     ],
   }),
   shellComponent: RootShell,
