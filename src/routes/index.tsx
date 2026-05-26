@@ -415,16 +415,18 @@ function Landing() {
 /* ---------- Hero ---------- */
 function Hero() {
   return (
-    <section className="pt-24 md:pt-28 pb-[60px] md:pb-[80px] px-5 md:px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <section className="pt-20 md:pt-28 pb-[40px] md:pb-[80px] px-5 md:px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-5 md:gap-10 items-center">
         {/* Mobile: image first */}
         <div className="order-1 md:order-2 relative flex justify-center">
           <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(232,24,122,0.18),transparent_60%)]" />
           <img
             src={bottle1}
             alt="Pote Cadysense 60 cápsulas sobre pedestal de mármore"
-            className="relative animate-float-bottle w-[280px] md:w-[440px] drop-shadow-[0_25px_40px_rgba(100,60,20,0.25)]"
+            className="relative animate-float-bottle max-h-[280px] md:max-h-none w-auto md:w-[440px] drop-shadow-[0_25px_40px_rgba(100,60,20,0.25)]"
             fetchPriority="high"
+            loading="eager"
+            decoding="async"
             width={440}
             height={440}
           />
