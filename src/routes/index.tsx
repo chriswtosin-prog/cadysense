@@ -268,7 +268,7 @@ function Landing() {
           <div className="grid grid-cols-2 gap-4">
             {[print2, print3].map((p, i) => (
               <div key={i} className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
-                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" className="w-full h-full object-cover object-top" />
+                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={600} height={1297} className="w-full h-full object-cover object-top" />
                 <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
               </div>
             ))}
