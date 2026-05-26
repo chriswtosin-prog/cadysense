@@ -503,18 +503,28 @@ function Faq() {
     ["Por que 3 potes e não 1?", "Equilíbrio real exige constância — e constância exige tempo."],
     ["O Cadysense tem contraindicações?", "É um suplemento alimentar natural. Recomendamos consultar um profissional em caso de gravidez, amamentação ou uso de medicamentos contínuos."],
   ];
-  const [open, setOpen] = useState<number | null>(0);
+  const [openSet, setOpenSet] = useState<Set<number>>(new Set([0, 2]));
+  const toggle = (i: number) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i); else next.add(i);
+      return next;
+    });
+  };
   return (
     <div className="max-w-2xl mx-auto space-y-3">
-      {items.map(([q, a], i) => (
-        <div key={i} className="bg-white rounded-lg border border-[var(--border)] reveal">
-          <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between text-left px-5 py-4">
-            <span className="font-display text-lg pr-4">{q}</span>
-            <span className={`text-pink text-xl transition-transform ${open === i ? "rotate-45" : ""}`}>+</span>
-          </button>
-          {open === i && <div className="px-5 pb-5 text-sm text-muted leading-relaxed">{a}</div>}
-        </div>
-      ))}
+      {items.map(([q, a], i) => {
+        const isOpen = openSet.has(i);
+        return (
+          <div key={i} className="bg-white rounded-lg border border-[var(--border)] reveal">
+            <button onClick={() => toggle(i)} className="w-full flex items-center justify-between text-left px-5 py-4">
+              <span className="font-display text-lg pr-4">{q}</span>
+              <span className={`text-pink text-xl transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
+            </button>
+            {isOpen && <div className="px-5 pb-5 text-sm text-muted leading-relaxed">{a}</div>}
+          </div>
+        );
+      })}
     </div>
   );
 }
