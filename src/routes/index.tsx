@@ -642,12 +642,13 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Para quem já sabe que vai continuar.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[100px]">
-          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={400} height={400} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
           <p className="text-xs text-label line-through">De R$ 499,90</p>
           <p className="font-display text-3xl text-deep leading-none my-1">R$ 297,90</p>
+          <p className="text-[0.7rem] text-label mt-1">ou 12x de R$27,32 no cartão</p>
         </div>
 
         <div className="divider-gold my-3" />
