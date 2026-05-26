@@ -523,7 +523,7 @@ function Offers() {
         <p className="text-pink text-xs font-medium mb-3">🔥 Mais de 4.800 pedidos este mês</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
