@@ -253,6 +253,9 @@ function Landing() {
         <p className="text-center text-xs tracking-widest uppercase text-label mt-8">
           🔒 Compra 100% segura · Frete grátis nos kits · Satisfação garantida
         </p>
+        <p className="text-center text-[0.7rem] text-label mt-2">
+          🔒 Ambiente 100% seguro · SSL · Dados protegidos
+        </p>
       </Section>
 
       {/* PRINTS */}
