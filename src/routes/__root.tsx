@@ -88,15 +88,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "cadysense" },
       { name: "description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Cadysense" },
+      { name: "robots", content: "index, follow" },
       { property: "og:title", content: "cadysense" },
       { property: "og:description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Cadysense" },
       { name: "twitter:title", content: "cadysense" },
-      { name: "twitter:description", content: "Cadysense is a premium feminine supplement for intimate balance and well-being." },
+      { name: "twitter:description", content: "Para mulheres que já cansaram de tratar e ver voltar." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/53b7e088-3d0e-4cac-b01b-a56e051544e7/id-preview-85ef381f--e743f648-688c-40bb-bdca-d99bf18dfc88.lovable.app-1779320592730.png" },
     ],
     links: [
@@ -104,9 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-    ],
-    scripts: [
-      { children: META_PIXEL_SCRIPT },
+      { rel: "canonical", href: "https://cadysense.lovable.app/" },
     ],
   }),
   shellComponent: RootShell,
@@ -130,6 +131,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
             alt=""
           />
         </noscript>
+        <script defer dangerouslySetInnerHTML={{ __html: META_PIXEL_SCRIPT }} />
       </body>
     </html>
   );

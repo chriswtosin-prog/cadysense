@@ -41,6 +41,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       { rel: "preconnect", href: "https://connect.facebook.net" },
+      { rel: "dns-prefetch", href: "https://revitasense.mycartpanda.com" },
       { rel: "preload", as: "image", href: bottle1, fetchpriority: "high" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" },
     ],
@@ -252,6 +253,9 @@ function Landing() {
         <p className="text-center text-xs tracking-widest uppercase text-label mt-8">
           🔒 Compra 100% segura · Frete grátis nos kits · Satisfação garantida
         </p>
+        <p className="text-center text-[0.7rem] text-label mt-2">
+          🔒 Ambiente 100% seguro · SSL · Dados protegidos
+        </p>
       </Section>
 
       {/* PRINTS */}
@@ -263,13 +267,20 @@ function Landing() {
 
         <div className="max-w-4xl mx-auto space-y-4 reveal">
           <div className="rounded-lg overflow-hidden border border-[var(--border)] bg-white">
-            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={800} height={1729} className="w-full h-auto" />
+            <img src={print1} alt="Print cliente principal" loading="lazy" decoding="async" width={400} height={300} className="w-full h-auto" />
           </div>
+          <p className="text-center text-xs text-label italic">Cliente verificada — comprou o kit de 3 potes</p>
           <div className="grid grid-cols-2 gap-4">
-            {[print2, print3].map((p, i) => (
-              <div key={i} className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
-                <img src={p} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={600} height={1297} className="w-full h-full object-cover object-top" />
-                <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
+            {[
+              { src: print2, caption: "Cliente verificada — segunda compra" },
+              { src: print3, caption: "Cliente verificada — usa há 2 meses" },
+            ].map((item, i) => (
+              <div key={i}>
+                <div className="relative rounded-lg overflow-hidden border border-[var(--border)] bg-white" style={{ height: 200 }}>
+                  <img src={item.src} alt={`Print cliente ${i + 2}`} loading="lazy" decoding="async" width={400} height={300} className="w-full h-full object-cover object-top" />
+                  <div className="absolute inset-x-0 bottom-0 h-16 pointer-events-none" style={{ background: "linear-gradient(to top, #fff, transparent)" }} />
+                </div>
+                <p className="text-center text-xs text-label italic mt-2">{item.caption}</p>
               </div>
             ))}
           </div>
@@ -427,8 +438,8 @@ function Hero() {
             fetchPriority="high"
             loading="eager"
             decoding="async"
-            width={440}
-            height={440}
+            width={400}
+            height={400}
           />
         </div>
 
@@ -492,18 +503,28 @@ function Faq() {
     ["Por que 3 potes e não 1?", "Equilíbrio real exige constância — e constância exige tempo."],
     ["O Cadysense tem contraindicações?", "É um suplemento alimentar natural. Recomendamos consultar um profissional em caso de gravidez, amamentação ou uso de medicamentos contínuos."],
   ];
-  const [open, setOpen] = useState<number | null>(0);
+  const [openSet, setOpenSet] = useState<Set<number>>(new Set([0, 2]));
+  const toggle = (i: number) => {
+    setOpenSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i); else next.add(i);
+      return next;
+    });
+  };
   return (
     <div className="max-w-2xl mx-auto space-y-3">
-      {items.map(([q, a], i) => (
-        <div key={i} className="bg-white rounded-lg border border-[var(--border)] reveal">
-          <button onClick={() => setOpen(open === i ? null : i)} className="w-full flex items-center justify-between text-left px-5 py-4">
-            <span className="font-display text-lg pr-4">{q}</span>
-            <span className={`text-pink text-xl transition-transform ${open === i ? "rotate-45" : ""}`}>+</span>
-          </button>
-          {open === i && <div className="px-5 pb-5 text-sm text-muted leading-relaxed">{a}</div>}
-        </div>
-      ))}
+      {items.map(([q, a], i) => {
+        const isOpen = openSet.has(i);
+        return (
+          <div key={i} className="bg-white rounded-lg border border-[var(--border)] reveal">
+            <button onClick={() => toggle(i)} className="w-full flex items-center justify-between text-left px-5 py-4">
+              <span className="font-display text-lg pr-4">{q}</span>
+              <span className={`text-pink text-xl transition-transform ${isOpen ? "rotate-45" : ""}`}>+</span>
+            </button>
+            {isOpen && <div className="px-5 pb-5 text-sm text-muted leading-relaxed">{a}</div>}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -523,12 +544,13 @@ function Offers() {
         <p className="text-pink text-xs font-medium mb-3">🔥 Mais de 4.800 pedidos este mês</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle1} alt="1 pote Cadysense" loading="lazy" decoding="async" width={400} height={400} className="h-full w-auto object-contain animate-float-bottle" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
           <p className="text-xs text-label line-through">De R$ 137,90</p>
           <p className="font-display text-5xl text-pink leading-none my-1">R$ 79,90</p>
+          <p className="text-[0.7rem] text-label mt-1">ou 12x de R$7,32 no cartão</p>
         </div>
 
         <div className="divider-gold my-4" />
@@ -576,12 +598,13 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Melhor custo-benefício para equilíbrio real.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[110px]">
-          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle3} alt="3 potes Cadysense" loading="lazy" decoding="async" width={400} height={400} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
           <p className="text-xs text-label line-through">De R$ 279,80</p>
           <p className="font-display text-4xl text-gold leading-none my-1">R$ 197,90</p>
+          <p className="text-[0.7rem] text-label mt-1">ou 12x de R$18,16 no cartão</p>
         </div>
 
         <div className="divider-gold my-4" />
@@ -619,12 +642,13 @@ function Offers() {
         <p className="text-sm text-muted mt-1 mb-3">Para quem já sabe que vai continuar.</p>
 
         <div className="flex justify-center mb-4 h-[90px] md:h-[100px]">
-          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={700} height={700} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
+          <img src={bottle5} alt="5 potes Cadysense" loading="lazy" decoding="async" width={400} height={400} className="h-full w-auto object-contain" style={{ filter: "drop-shadow(0 12px 24px rgba(100,60,20,0.2))" }} />
         </div>
 
         <div className="text-center mb-3">
           <p className="text-xs text-label line-through">De R$ 499,90</p>
           <p className="font-display text-3xl text-deep leading-none my-1">R$ 297,90</p>
+          <p className="text-[0.7rem] text-label mt-1">ou 12x de R$27,32 no cartão</p>
         </div>
 
         <div className="divider-gold my-3" />
