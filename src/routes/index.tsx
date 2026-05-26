@@ -4,12 +4,12 @@ import {
   Check, Crown, Star, ShieldCheck, ChevronDown, ArrowRight, Shield,
   Sparkles, Heart, Leaf, Smile,
 } from "lucide-react";
-import bottle1 from "@/assets/cadysense-bottle-1.png";
-import bottle3 from "@/assets/cadysense-bottle-3.png";
-import bottle5 from "@/assets/cadysense-bottle-5.png";
-import print1 from "@/assets/print-cliente-1.png";
-import print2 from "@/assets/print-cliente-2.png";
-import print3 from "@/assets/print-cliente-3.png";
+import bottle1 from "@/assets/cadysense-bottle-1.webp";
+import bottle3 from "@/assets/cadysense-bottle-3.webp";
+import bottle5 from "@/assets/cadysense-bottle-5.webp";
+import print1 from "@/assets/print-cliente-1.webp";
+import print2 from "@/assets/print-cliente-2.webp";
+import print3 from "@/assets/print-cliente-3.webp";
 
 declare global {
   interface Window {
@@ -40,7 +40,9 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" },
+      { rel: "preconnect", href: "https://connect.facebook.net" },
+      { rel: "preload", as: "image", href: bottle1, fetchpriority: "high" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" },
     ],
   }),
   component: Landing,
